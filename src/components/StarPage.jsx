@@ -1,17 +1,15 @@
 import { motion } from 'framer-motion'
+import paridhiPhoto from '../assets/paridhi.jpeg'
 
 const StarPage = ({ setCurrentPage }) => {
 
-  // ===== CHANGE THESE URLS =====
+  // ===== URLS =====
   const siriusPhoto =
-    "https://upload.wikimedia.org/wikipedia/commons/d/dd/Close-up_of_Sirius.jpg?utm_source=en.wikiquote.org&utm_campaign=index&utm_content=original"
-
-  const paridhiPhoto =
-    "src/assets/paridhi.jpeg"
+    "https://upload.wikimedia.org/wikipedia/commons/d/dd/Close-up_of_Sirius.jpg"
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 pb-24">
-      
+
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -162,17 +160,6 @@ const StarPage = ({ setCurrentPage }) => {
               My ParidhiStar ✨
             </p>
           </div>
-        </motion.div>
-
-        {/* Navigation Buttons */}
-        <motion.div
-          className="flex flex-col md:flex-row gap-6 justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.1 }}
-        >
-
-
         </motion.div>
 
       </motion.div>

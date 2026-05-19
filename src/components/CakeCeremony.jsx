@@ -1,14 +1,10 @@
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-
+import birthdaySong from '../assets/perfect.mp3'
 
 const CakeCeremony = ({ setCurrentPage }) => {
   const [stage, setStage] = useState('candle')
   const audioRef = useRef(null)
-
-  // ===== ADD YOUR SONG URL HERE =====
-  const birthdaySong =
-    "src/assets/perfect.mp3"
 
   const blowCandle = () => {
     setStage('cake')
@@ -18,9 +14,11 @@ const CakeCeremony = ({ setCurrentPage }) => {
     setStage('celebration')
 
     // Play Song
-    if (audioRef.current) {
-      audioRef.current.play()
-    }
+    setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.play()
+      }
+    }, 300)
   }
 
   return (
@@ -236,7 +234,9 @@ const CakeCeremony = ({ setCurrentPage }) => {
       </AnimatePresence>
 
       {/* Audio */}
-      <audio ref={audioRef} src={birthdaySong} />
+      <audio ref={audioRef}>
+        <source src={birthdaySong} type="audio/mp3" />
+      </audio>
 
     </div>
   )
