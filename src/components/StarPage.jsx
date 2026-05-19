@@ -7,7 +7,7 @@ const StarPage = ({ setCurrentPage }) => {
     "https://upload.wikimedia.org/wikipedia/commons/d/dd/Close-up_of_Sirius.jpg?utm_source=en.wikiquote.org&utm_campaign=index&utm_content=original"
 
   const paridhiPhoto =
-    "src/assets/Paridhi_Img.jpeg"
+    "src/assets/paridhi.jpeg"
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 pb-24">

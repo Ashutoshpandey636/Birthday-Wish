@@ -1,13 +1,14 @@
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+
 const CakeCeremony = ({ setCurrentPage }) => {
   const [stage, setStage] = useState('candle')
   const audioRef = useRef(null)
 
   // ===== ADD YOUR SONG URL HERE =====
   const birthdaySong =
-    "src/assets/Edd_Sheeran_-_Perfect_(mp3.pm).mp3"
+    "src/assets/perfect.mp3"
 
   const blowCandle = () => {
     setStage('cake')
